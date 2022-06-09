@@ -1,0 +1,98 @@
+﻿input[type="button"], input[type="submit"] {
+    background-color: white;
+    color: black;
+    border: 2px solid #2E7758;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    border: 2px solid #2E7758;
+    border-radius: 4px;
+    font-size:16px;
+}
+
+input[type='submit'], button, [aria-label] {
+    cursor: pointer;
+}
+
+#editForm {
+    display: none;
+}
+
+#editFormArtist {
+    display: none;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, sans-serif;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #f8f8f8;
+    padding: 5px;
+}
+
+td {
+    border: 1px solid;
+    padding: 5px;
+}
+
+
+.intro {
+    background-color: #2E7758;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#ArtistButton {
+    background-color: #2E7758;
+}
+
+#SongsBlock {
+    display: none;
+    text-align: center
+}
+
+#ArtistsBlock {
+    display: none;
+    text-align: center
+}
+
+.tables {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+    .tables td, .tables th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+ .tables tr:nth-child(even){background-color: #f2f2f2;} tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tables tr:hover {
+    background-color: #ddd;
+}
+
+.tables th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2E7758;
+    color: white;
+}

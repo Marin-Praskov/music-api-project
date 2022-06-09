@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SongRec</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body style="background-color: #FEF9F3">
+    <h1 style="text-align:center">Music CRUD</h1>
+        
+    <div style="text-align:center">
+        <button class="intro" id="ArtistButton" onclick="showArtists()">
+        Manage Artists</button>
+        <button class="intro" id="SongButton" onclick="showSongs()">
+        Manage Songs</button>
+    </div>
+
+    <!--
+    <h3>Search for a song</h3>
+    <form action="javascript:void(0);" onsubmit="searchSong()">
+        <input type="text" id="search-name" placeholder="Song">
+        <input type="submit" value="Search">
+    </form>
+
+     -->
+
+    <div id="SongsBlock">
+        <h1>Songs</h1>
+        
+        <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+            <input type="text" id="add-name" placeholder="Song">
+            <input type="text" id="add-artist" placeholder="Artist">
+            <input type="text" id="add-album" placeholder="Album">
+            <input type="submit" value="Add">
+        </form>
+
+        <div id="editForm" style="display:none;">
+            <h3>Edit</h3>
+            <form action="javascript:void(0);" onsubmit="updateItem()">
+                <input type="hidden" id="edit-id">
+                <input type="text" id="edit-name">
+                <input type="text" id="edit-artist">
+                <input type="text" id="edit-album">
+                <input type="submit" value="Save">
+                <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+            </form>
+        </div>
+
+        <p id="counter"></p>
+
+        <table id="songsTable" class="tables">
+            <tr>
+                <th>Name</th>
+                <th>Album</th>
+                <th>Artist</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tbody id="songs"></tbody>
+        </table>
+    </div>
+
+
+    <!-- HERE BEGINS ARTIST  -->
+    <div id="ArtistsBlock">
+        <h1>Artists</h1>
+        <form action="javascript:void(0);" method="POST" onsubmit="addArtist()">
+            <input type="text" id="add-name-artist" placeholder="Name">
+            <input type="text" id="add-lable-artist" placeholder="Lable">
+            <input type="text" id="add-genre-artist" placeholder="Genre">
+            <input type="submit" value="Add">
+        </form>
+
+        <div id="editFormArtist" style="display:none;">
+            <h3>Edit</h3>
+            <form action="javascript:void(0);" onsubmit="updateArtist()">
+                <input type="hidden" id="edit-id-artist">
+                <input type="text" id="edit-name-artist">
+                <input type="text" id="edit-label-artist">
+                <input type="text" id="edit-genre-artist">
+                <input type="submit" value="Save">
+                <a onclick="closeInputArtists" aria-label="Close">&#10006;</a>
+            </form>
+        </div>
+
+        <p id="counter"></p>
+
+        <table id=" artistsTable" class="tables">
+            <tr>
+                <th>Name</th>
+                <th>Label</th>
+                <th>Genre</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tbody id="artists"></tbody>
+        </table>
+    </div>
+        <!--  <button onclick="showTableSongs()">Show Songs</button> -->
+
+        <script src="js/site.js" asp-append-version="true"></script>
+        <script src="js/artists.js" asp-append-version="true"></script>
+        <script type="text/javascript">
+
+            function showArtists() {
+                getArtists();
+                var x = document.getElementById("ArtistsBlock");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+
+            function showSongs() {
+                getItems();
+                var x = document.getElementById("SongsBlock");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+
+
+
+
+         // getItems();
+         //   getArtists();
+        </script>
+</body>
+</html>
